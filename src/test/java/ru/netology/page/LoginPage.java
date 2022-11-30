@@ -13,12 +13,14 @@ public class LoginPage {
         $("[data-test-id=action-login]").click();
         return new VerificationPage();
     }
+
     public void invalidPasswordAssert(DataHelper.LoginInfo info) {
         $("[data-test-id=login] input").setValue(info.getLogin());
         $("[data-test-id=password] input").setValue(getRandomPassword());
         $("[data-test-id=action-login]").click();
         $("[data-test-id=error_notification]").shouldBe(Condition.visible);
     }
+
     public void tooManyAttemptsAssert(DataHelper.LoginInfo info) {
         for (int i = 0; i < 3; i++) {
             invalidPasswordAssert(info);

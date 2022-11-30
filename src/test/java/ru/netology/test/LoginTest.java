@@ -17,7 +17,7 @@ public class LoginTest {
     }
 
     @AfterAll
-    public static void shouldDelInfo(){
+    public static void shouldDelInfo() {
         DataHelper.deleteOldData();
     }
 
