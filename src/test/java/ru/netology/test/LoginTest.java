@@ -13,7 +13,7 @@ public class LoginTest {
     @BeforeEach
     public void shouldLogin() {
         Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+        open("http://185.119.57.64:9999");
     }
 
     @AfterAll
