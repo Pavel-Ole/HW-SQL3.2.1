@@ -7,6 +7,8 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.DriverManager;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class DataHelper {
 
     private static final Faker faker = new Faker();
