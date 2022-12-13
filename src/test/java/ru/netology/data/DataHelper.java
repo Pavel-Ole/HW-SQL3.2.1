@@ -54,7 +54,7 @@ public class DataHelper {
 
         try (
                 var conn = DriverManager
-                        .getConnection("jdbc:mysql://185.119.57.64:3306/app-db", "user", "pass")
+                        .getConnection("jdbc:mysql://localhost:3306/app-db", "user", "pass")
         ) {
             return runner.query(conn, select, new ScalarHandler<>());
         }
@@ -70,7 +70,7 @@ public class DataHelper {
 
         try (
                 var conn = DriverManager
-                        .getConnection("jdbc:mysql://185.119.57.64:3306/app-db", "user", "pass")
+                        .getConnection("jdbc:mysql://localhost:3306/app-db", "user", "pass")
         ) {
             runner.update(conn, deleteCards);
             runner.update(conn, deleteCodes);
